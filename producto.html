@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LunaTech - Detalle de Producto</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="producto.css">
+  </head>
+  <body>
+    <main>
+      <header id="header">
+        <div id="logo">
+          <img src="./sources/lunatech.png" alt="Logo de LunaTech">
+        </div>
+        <div id="search">
+          <input type="text" placeholder="Buscar...">
+        </div>
+        <button id="menu-toggle" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div id="bttns">
+          <a href="index.html">Catalogo</a>
+          <a href="">Nosotros</a>
+          <a href="">Contacto</a>
+        </div>
+      </header>
+
+      <section class="product-detail">
+        <nav class="breadcrumb">
+          <a href="index.html">Inicio</a> &gt;
+          <a href="index.html#catalogo">Catálogo</a> &gt;
+          <span id="breadcrumb-name"></span>
+        </nav>
+
+        <div class="detail-grid">
+          <div class="detail-gallery">
+            <div class="thumbnails" id="thumbnails"></div>
+            <div class="main-image"><img id="main-image" src="" alt=""></div>
+          </div>
+
+          <div class="detail-info">
+            <span class="badge" id="detail-badge"></span>
+            <h1 id="detail-name"></h1>
+            <p class="detail-subtitle" id="detail-subtitle"></p>
+            <div class="detail-price" id="detail-price"></div>
+
+            <div class="instore-notice">
+              <h4>Solo disponible en tienda</h4>
+              <p>Este equipo requiere configuración personalizada y manejo especial. Por seguridad, la entrega se realiza exclusivamente en nuestras sucursales autorizadas.</p>
+            </div>
+
+            <h4 class="summary-label">Resumen de Potencia</h4>
+            <p id="detail-summary"></p>
+          </div>
+        </div>
+
+        <div class="specs-section">
+          <h2>Especificaciones Técnicas</h2>
+          <div class="specs-grid" id="specs-grid"></div>
+        </div>
+
+        <div class="lower-grid">
+          <div class="performance">
+            <h2>Rendimiento sin Precedentes</h2>
+            <p id="detail-performance"></p>
+            <ul class="highlights-list" id="highlights-list"></ul>
+          </div>
+        </div>
+
+        <div class="faq-section">
+          <h2>Preguntas Frecuentes</h2>
+          <p class="faq-subtitle">Información importante sobre tu próxima adquisición</p>
+          <div id="faq-list"></div>
+        </div>
+
+        <div class="related-section">
+          <h2>También te puede interesar</h2>
+          <div class="related-grid" id="related-grid"></div>
+        </div>
+
+        <div class="back-btn-wrap">
+          <a href="index.html#catalogo" class="btn-back">&lsaquo; Volver al Catálogo</a>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="footer-cta">
+        <h2>¿No encuentras lo que buscas?</h2>
+        <p>Nuestros expertos están listos para asesorarte en la configuración de tu estación de trabajo ideal.</p>
+        <button id="btn-asesor">Chatear con un asesor</button>
+      </div>
+
+      <div class="footer-grid">
+        <div class="div-footer">
+          <h3 class="title">¿Quiénes somos?</h3>
+          <p class="info">Tu destino definitivo para investigar y comparar la mejor tecnología. Encuentra las especificaciones que necesitas para tu próximo equipo.</p>
+        </div>
+        <div class="div-footer">
+          <h3 class="title">Categorías</h3>
+          <a href="" class="links">Computadoras de Oficina</a>
+          <a href="" class="links">Estaciones de Diseño</a>
+          <a href="" class="links">Equipos Gaming</a>
+          <a href="" class="links">Accesorios</a>
+        </div>
+        <div class="div-footer">
+          <h3 class="title">Ayuda</h3>
+          <a href="" class="links">Preguntas Frecuentes</a>
+          <a href="" class="links">Política de Garantía</a>
+          <a href="" class="links">Soporte Técnico</a>
+        </div>
+        <div class="div-footer">
+          <h3 class="title">Contacto</h3>
+          <a href="mailto:info@lunatech.com" class="links">info@lunatech.com</a>
+          <a href="" class="links">C.C. Gran bazar (local vaya a saber Dios)</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="info">&copy; 2026 Lunatech ft tonyokk33 ft ricardoux7. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="producto.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

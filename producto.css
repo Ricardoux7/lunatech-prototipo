@@ -1,0 +1,369 @@
+.product-detail {
+  padding: 2.5rem 8%;
+  background-color: #021a2c;
+  color: #ffffff;
+}
+
+.breadcrumb {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb a {
+  color: #7dd3fc;
+  text-decoration: none;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.detail-gallery {
+  display: flex;
+  gap: 1rem;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.thumbnails img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+}
+
+.thumbnails img:hover,
+.thumbnails img.active {
+  opacity: 1;
+  border-color: #7dd3fc;
+}
+
+.main-image {
+  flex: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 380px;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-info h1 {
+  font-size: 2.2rem;
+  margin: 0.8rem 0 0.3rem;
+}
+
+.detail-subtitle {
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.detail-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #7dd3fc;
+  margin-bottom: 1.5rem;
+}
+
+.instore-notice {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.instore-notice h4 {
+  color: #7dd3fc;
+  margin-bottom: 0.5rem;
+}
+
+.instore-notice p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.summary-label {
+  color: #7dd3fc;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+#detail-summary {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.specs-section h2,
+.lower-grid h2,
+.faq-section h2,
+.related-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  font-size: 0.9rem;
+  gap: 1rem;
+}
+
+.spec-item span:first-child {
+  color: #94a3b8;
+}
+
+.spec-item span:last-child {
+  font-weight: 600;
+  text-align: right;
+}
+
+.lower-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.availability-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.8rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.availability-item .store-name {
+  font-weight: 600;
+}
+
+.availability-item .store-address {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.status-pill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.status-pill.instock { background: rgba(74, 222, 128, 0.15); color: #4ade80; }
+.status-pill.consult { background: rgba(125, 211, 252, 0.15); color: #7dd3fc; }
+.status-pill.agotado { background: rgba(248, 113, 113, 0.15); color: #f87171; }
+
+.performance p {
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.highlights-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.highlights-list li {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.highlights-list li::before {
+  content: '✓ ';
+  color: #7dd3fc;
+}
+
+.faq-section {
+  margin-bottom: 3rem;
+}
+
+.faq-subtitle {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  gap: 1rem;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  color: #94a3b8;
+  padding: 0 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 200px;
+  padding: 0 1.2rem 1rem;
+}
+
+.faq-item.open .faq-toggle {
+  transform: rotate(180deg);
+}
+
+.faq-toggle {
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.back-btn-wrap {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.btn-back {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+  border-color: #7dd3fc;
+  color: #7dd3fc;
+}
+
+/* ======================================================= */
+/* ==================== RESPONSIVE ======================== */
+/* ======================================================= */
+
+@media (max-width: 1024px) {
+  .product-detail {
+    padding: 2rem 6%;
+  }
+
+  .related-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .detail-grid,
+  .lower-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-gallery {
+    flex-direction: column-reverse;
+  }
+
+  .thumbnails {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .thumbnails img {
+    flex-shrink: 0;
+  }
+
+  .main-image {
+    height: 280px;
+  }
+
+  .detail-info h1 {
+    font-size: 1.8rem;
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .product-detail {
+    padding: 1.5rem 6%;
+  }
+
+  .detail-price {
+    font-size: 1.6rem;
+  }
+
+  .spec-item {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .spec-item span:last-child {
+    text-align: left;
+  }
+
+  .availability-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+}
