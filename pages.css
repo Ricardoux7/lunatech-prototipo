@@ -1,0 +1,266 @@
+/* Hero (Nosotros / Contacto) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif; /* o 'Poppins', sans-serif si prefieres mantenerla */
+}
+
+h1, h2, h3,
+.badge,
+.stat-number,
+#header a,
+.btn {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.page-hero {
+  padding: 4rem 8% 2.5rem;
+  background-color: #021a2c;
+  color: #ffffff;
+  width: 100%;
+}
+
+.page-hero h1 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  line-height: 1.25;
+  margin: 1rem 0 1.2rem;
+}
+
+.page-hero p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/*  NOSOTROS  */
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 0 8% 3rem;
+  background-color: #021a2c;
+}
+
+.mission-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.8rem;
+  color: #ffffff;
+}
+
+.mission-card h3 {
+  color: #7dd3fc;
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+}
+
+.mission-card p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2.5rem 8%;
+  background: rgba(3, 44, 74, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-item {
+  text-align: center;
+  color: #ffffff;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #7dd3fc;
+  margin-bottom: 0.3rem;
+}
+
+.stat-label {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.team-section {
+  padding: 3rem 8% 4rem;
+  background-color: #021a2c;
+  color: #ffffff;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-subtitle {
+  color: #94a3b8;
+  margin-bottom: 2rem;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 220px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(125, 211, 252, 0.4);
+}
+
+.team-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 100%);
+  color: #021a2c;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.1rem;
+}
+
+.team-card h3 {
+  margin-bottom: 0.2rem;
+}
+
+.team-card p {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+/*  CONTACTO  */
+.contact-channels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1rem 8% 4rem;
+  background-color: #021a2c;
+}
+
+.channel-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.4rem;
+  text-decoration: none;
+  color: #ffffff;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+a.channel-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(125, 211, 252, 0.4);
+}
+
+.channel-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  color: #7dd3fc;
+}
+
+.channel-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.channel-card.whatsapp .channel-icon { color: #4ade80; }
+.channel-card.instagram .channel-icon { color: #f472b6; }
+
+.channel-text h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.channel-text p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+/*  RESPONSIVE  */
+
+@media (max-width: 1024px) {
+  .page-hero {
+    padding: 3rem 6% 2rem;
+  }
+
+  .page-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .mission-grid,
+  .contact-channels {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .contact-channels {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-section {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 6%;
+  }
+
+  .contact-channels {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .stats-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.7rem;
+  }
+
+  .team-card {
+    width: 100%;
+  }
+
+  .channel-card {
+    padding: 1.1rem;
+  }
+}

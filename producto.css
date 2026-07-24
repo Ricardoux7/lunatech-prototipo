@@ -1,3 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3,
+.badge,
+.stat-number,
+#header a,
+.btn {
+  font-family: 'Orbitron', sans-serif;
+}
+
 .product-detail {
   padding: 2.5rem 8%;
   background-color: #021a2c;
@@ -290,9 +305,7 @@
   color: #7dd3fc;
 }
 
-/* ======================================================= */
-/* ==================== RESPONSIVE ======================== */
-/* ======================================================= */
+/*  RESPONSIVE  */
 
 @media (max-width: 1024px) {
   .product-detail {

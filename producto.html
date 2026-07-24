@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LunaTech - Detalle de Producto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="producto.css">
   </head>
   <body>
     <main>
       <header id="header">
-        <div id="logo">
+        <a id="logo" href="index.html">
           <img src="./sources/lunatech.png" alt="Logo de LunaTech">
-        </div>
+        </a>
         <div id="search">
-          <input type="text" placeholder="Buscar...">
+          <input type="text" id="search-input" placeholder="Buscar productos..." autocomplete="off">
         </div>
         <button id="menu-toggle" aria-label="Abrir menú">
           <span></span>
@@ -22,9 +25,9 @@
           <span></span>
         </button>
         <div id="bttns">
-          <a href="index.html">Catalogo</a>
-          <a href="">Nosotros</a>
-          <a href="">Contacto</a>
+          <a href="index.html#catalogo" class="active">Catalogo</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="contacto.html">Contacto</a>
         </div>
       </header>
 
@@ -115,7 +118,9 @@
         <div class="div-footer">
           <h3 class="title">Contacto</h3>
           <a href="mailto:info@lunatech.com" class="links">info@lunatech.com</a>
-          <a href="" class="links">C.C. Gran bazar (local vaya a saber Dios)</a>
+          <a href="contacto.html" class="links">C.C. Gran bazar Local: ML-1605</a>
+          <a href="tel:+584246618974" class="links">0424-6618974</a>
+          <a href="https://instagram.com/luna.tech7" target="_blank" rel="noopener" class="links">Síguenos en redes sociales: @luna.tech7</a>
         </div>
       </div>
 
@@ -127,5 +132,6 @@
     <script src="products.js"></script>
     <script src="producto.js"></script>
     <script src="main.js"></script>
+    <script src="search.js"></script>
   </body>
 </html>

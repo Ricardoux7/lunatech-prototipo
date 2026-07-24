@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LunaTech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
     <main>
       <header id="header">
-        <div id="logo">
+        <a id="logo" href="index.html">
           <img src="./sources/lunatech.png" alt="Logo de LunaTech">
-        </div>
+        </a>
         <div id="search">
-          <input type="text" placeholder="Buscar...">
+          <input type="text" id="search-input" placeholder="Buscar productos..." autocomplete="off">
         </div>
         <button id="menu-toggle" aria-label="Abrir menú">
           <span></span>
@@ -21,26 +24,27 @@
           <span></span>
         </button>
         <div id="bttns">
-          <a href="index.html">
+          <a href="index.html#catalogo" class="active">
             Catalogo
           </a>
-          <a href="">
+          <a href="nosotros.html">
             Nosotros
           </a>
-          <a href="">
+          <a href="contacto.html">
             Contacto
           </a>
         </div>
       </header>
   <section class="hero">
   <div class="hero-content">
-    <img src="./sources/lunatech.png" alt="Logo de LunaTech">
-    <span class="badge">Hardware de Próxima Generación</span>
-    <h1>Potencia tu <br><span class="text-gradient">Flujo de Trabajo</span></h1>
-    <p>Investiga y compara los mejores equipos del mercado. Accede a especificaciones técnicas profundas y disponibilidad real en nuestras sucursales aliadas.</p>
-    <div class="hero-buttons">
-      <a href="#catalogo" class="btn btn-primary">Explorar Catálogo</a>
-      <a href="#" class="btn btn-secondary">Ver Ofertas</a>
+    <img src="./sources/lunatech.png" alt="Logo de LunaTech" class="hero-logo">
+    <div class="hero-copy">
+      <span class="badge">Hardware de Próxima Generación</span>
+      <h1>Potencia tu <br><span class="text-gradient">Flujo de Trabajo</span></h1>
+      <p>Investiga y compara los mejores equipos del mercado. Accede a especificaciones técnicas profundas y disponibilidad real en nuestras sucursales aliadas.</p>
+      <div class="hero-buttons">
+        <a href="#catalogo" class="btn btn-primary">Explorar Catálogo</a>
+      </div>
     </div>
   </div>
   
@@ -130,12 +134,6 @@
   </section>
 </main>
     <footer id="footer">
-      <div class="footer-cta">
-        <h2>¿No encuentras lo que buscas?</h2>
-        <p>Nuestros expertos están listos para asesorarte en la configuración de tu estación de trabajo ideal.</p>
-        <button id="btn-asesor">Chatear con un asesor</button>
-      </div>
-
       <div class="footer-grid">
         <div class="div-footer">
           <h3 class="title">¿Quiénes somos?</h3>
@@ -160,9 +158,9 @@
         <div class="div-footer">
           <h3 class="title">Contacto</h3>
           <a href="mailto:info@lunatech.com" class="links">info@lunatech.com</a>
-          <a href="" class="links">C.C. Gran bazar Local: ML-1605</a>
-          <a href="" class="links">0424-6618974</a>
-          <a href="" class="links">Síguenos en redes sociales: @luna.tech7</a>
+          <a href="contacto.html" class="links">C.C. Gran bazar Local: ML-1605</a>
+          <a href="tel:+584246618974" class="links">0424-6618974</a>
+          <a href="https://instagram.com/luna.tech7" target="_blank" rel="noopener" class="links">Síguenos en redes sociales: @luna.tech7</a>
         </div>
       </div>
 
@@ -174,5 +172,6 @@
     <script src="products.js"></script>
     <script src="catalog.js"></script>
     <script src="main.js"></script>
+    <script src="search.js"></script>
   </body>
 </html>

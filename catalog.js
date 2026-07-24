@@ -8,6 +8,43 @@ const sortSelect = document.getElementById('sort-select');
 const priceRange = document.getElementById('price-range');
 const priceValue = document.getElementById('price-value');
 const clearBtn = document.getElementById('clear-filters');
+const catalogHeader = document.querySelector('.catalog-header');
+
+const urlParams = new URLSearchParams(window.location.search);
+let searchQuery = urlParams.get('buscar') || '';
+
+function renderSearchBanner() {
+  let banner = document.getElementById('active-search-banner');
+
+  if (!searchQuery) {
+    if (banner) banner.remove();
+    return;
+  }
+
+  if (!banner) {
+    banner = document.createElement('div');
+    banner.id = 'active-search-banner';
+    banner.className = 'active-search-banner';
+    catalogHeader.insertAdjacentElement('afterend', banner);
+  }
+
+  banner.innerHTML = `
+    <span>Mostrando resultados para <strong>"${searchQuery}"</strong></span>
+    <button type="button" class="clear-search-btn" id="clear-search-btn">Quitar búsqueda</button>
+  `;
+
+  document.getElementById('clear-search-btn').addEventListener('click', () => {
+    searchQuery = '';
+    const url = new URL(window.location.href);
+    url.searchParams.delete('buscar');
+    window.history.replaceState({}, '', url);
+    const headerSearchInput = document.getElementById('search-input');
+    if (headerSearchInput) headerSearchInput.value = '';
+    currentPage = 1;
+    renderSearchBanner();
+    render();
+  });
+}
 
 function getActiveFilters() {
   const categorias = [...document.querySelectorAll('[data-filter="categoria"]:checked')].map(el => el.value);
@@ -17,11 +54,13 @@ function getActiveFilters() {
 
 function applyFiltersAndSort() {
   const { categorias, maxPrice } = getActiveFilters();
+  const q = searchQuery.trim().toLowerCase();
 
   let result = PRODUCTS.filter(p => {
     const matchCategoria = categorias.length === 0 || categorias.includes(p.category);
     const matchPrecio = p.price <= maxPrice;
-    return matchCategoria && matchPrecio;
+    const matchBusqueda = !q || p.name.toLowerCase().includes(q) || p.tag.toLowerCase().includes(q);
+    return matchCategoria && matchPrecio && matchBusqueda;
   });
 
   if (sortSelect.value === 'price-asc') result.sort((a, b) => a.price - b.price);
@@ -71,6 +110,7 @@ function renderPagination(totalItems) {
 }
 
 function render() {
+  renderSearchBanner();
   const filtered = applyFiltersAndSort();
   resultCount.textContent = filtered.length;
 
@@ -101,6 +141,12 @@ clearBtn.addEventListener('click', () => {
   priceRange.value = 5000;
   priceValue.textContent = '$5000';
   sortSelect.value = 'relevance';
+  searchQuery = '';
+  const url = new URL(window.location.href);
+  url.searchParams.delete('buscar');
+  window.history.replaceState({}, '', url);
+  const headerSearchInput = document.getElementById('search-input');
+  if (headerSearchInput) headerSearchInput.value = '';
   currentPage = 1;
   render();
 });
